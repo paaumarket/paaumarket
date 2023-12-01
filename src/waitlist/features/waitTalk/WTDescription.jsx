@@ -12,7 +12,7 @@ export default function WTDescription() {
         </p>
         <br />
         <p>
-          Join the waiting list to get notified when we launch and with{" "}
+          Join the waiting list to get notified when we launch and with
           <strong>special surprises for you!</strong>
         </p>
       </section>
