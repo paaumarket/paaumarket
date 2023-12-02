@@ -2,7 +2,7 @@ import axios from "axios";
 
 async function useFetch(method = "get", location = "/", data = {}) {
   try {
-    const url = `http://localhost:3000/api${location}`;
+    const url = `https://puce-tiny-clownfish.cyclic.app/api${location}`;
 
     const result = await axios({ method, url, data });
 
