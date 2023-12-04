@@ -1,11 +1,13 @@
 {
   "name": "paaumarket",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
-  "source": "./index.html",
   "scripts": {
-    "start": "parcel",
-    "build": "parcel build"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0"
   },
   "repository": {
     "type": "git",
@@ -25,7 +27,15 @@
     "prettier": "^3.1.0",
     "prettier-plugin-tailwindcss": "^0.5.7",
     "process": "^0.11.10",
-    "tailwindcss": "^3.3.5"
+    "tailwindcss": "^3.3.5",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "eslint": "^8.53.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.4",
+    "vite": "^5.0.0"
   },
   "dependencies": {
     "@fontsource-variable/mulish": "^5.0.16",
