@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const baseURL = "https://api-paaumarket.onrender.com";
-// http://localhost:3000/api
+const baseURL = "http://localhost:3000/api";
+// "https://api-paaumarket.onrender.com";
 
 async function useFetch(method = "get", location = "/", data = {}) {
   try {

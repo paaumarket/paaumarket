@@ -58,7 +58,7 @@ export default function RegisterForm() {
     <Form
       method="POST"
       action="/register"
-      className="my-5 rounded-md border-[0.042px] border-gray-200 px-8 py-10 shadow-gray-50 md:shadow-sm"
+      className="my-5 rounded-md border-[0.042px] border-gray-200 px-8 py-10 "
     >
       <div>
         <Toaster />

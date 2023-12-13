@@ -12,12 +12,14 @@ import NotFound from "./errors/PageNotFound";
 import Waitlist from "./waitlist/Waitlist";
 import Register from "./features/register/Register";
 import { submitAction } from "./features/register/RegisterForm";
+import Login from "./features/login/Login";
 
 const router = createBrowserRouter(
   createRoutesFromElements([
     <Route path="/" errorElement={<ErrorBoundary />}>
       <Route index element={<Waitlist />} />
       <Route path="register" action={submitAction} element={<Register />} />
+      <Route path="/login" element={<Login />} />
     </Route>,
     <Route path="*" element={<NotFound />}></Route>,
   ]),
