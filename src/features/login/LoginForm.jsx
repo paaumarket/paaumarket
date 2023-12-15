@@ -1,6 +1,33 @@
 import { Form, Link, redirect, useNavigation } from "react-router-dom";
 import MyInput from "../../utils/MyInput";
 import toast, { Toaster } from "react-hot-toast";
+import { useFetch } from "../../../services/useFetch";
+
+export async function loginAction({ request }) {
+  try {
+    const form = await request.formData();
+    const email = form.get("email");
+    const password = form.get("password");
+
+    const response = await useFetch("post", "/user/login", { email, password });
+
+    const {
+      data: { message },
+      status,
+    } = response;
+
+    if (status >= 200 && status <= 299) {
+      toast.success(message);
+      //   return redirect("/login");
+    } else {
+      toast.error(message);
+    }
+    return null;
+  } catch (error) {
+    console.log(error.message);
+    return error.message;
+  }
+}
 
 export default function LoginForm() {
   const navigation = useNavigation();

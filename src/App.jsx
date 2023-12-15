@@ -13,13 +13,16 @@ import Waitlist from "./waitlist/Waitlist";
 import Register from "./features/register/Register";
 import { submitAction } from "./features/register/RegisterForm";
 import Login from "./features/login/Login";
+import { loginAction } from "./features/login/LoginForm";
+import Dashboard from "./features/dashboard/Dashboard";
 
 const router = createBrowserRouter(
   createRoutesFromElements([
     <Route path="/" errorElement={<ErrorBoundary />}>
       <Route index element={<Waitlist />} />
       <Route path="register" action={submitAction} element={<Register />} />
-      <Route path="/login" element={<Login />} />
+      <Route path="/login" action={loginAction} element={<Login />} />
+      <Route path="/dashboard" element={<Dashboard />} />
     </Route>,
     <Route path="*" element={<NotFound />}></Route>,
   ]),
