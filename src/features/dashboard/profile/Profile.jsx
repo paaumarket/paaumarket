@@ -1,4 +1,4 @@
-import { Form } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Profile({
   profilePicture,
@@ -29,13 +29,12 @@ export default function Profile({
           <p>{email}</p>
           <p>{mobilePhoneNumber}</p>
         </div>
-        <Form method="post" className="py-3 md:px-10">
-          <input
-            type="button"
-            value="Edit"
-            className="cursor-pointer text-gray-200 hover:text-gray-300"
-          />
-        </Form>
+        <Link
+          to="edit/1"
+          className="inline-block cursor-pointer py-3 text-gray-200 hover:text-gray-300 md:px-10"
+        >
+          Edit profile
+        </Link>
       </div>
     </article>
   );

@@ -1,10 +1,11 @@
-import React from "react";
+import { useState } from "react";
 import logo from "../../assets/logo.png";
 import product from "../../assets/product.png";
-import Profile from "./Profile";
+import Profile from "./profile/Profile";
 import SellProduct from "./SellProduct";
 import SaleList from "./sale/SaleList";
 import profilePicture from "../../assets/johndoe.jpg";
+import { Outlet } from "react-router-dom";
 
 const user = {
   _id: 32,
@@ -78,6 +79,7 @@ export default function Dashboard() {
         </div>
       </div>
 
+      <Outlet />
       <Profile {...user} />
 
       <SellProduct
